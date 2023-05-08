@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <nav class="navbar navbar-default">    
+
+        <div class="header">
+
+            <div>
+                <h1 class="mainTitle">TestStore</h1>
+            </div>
+            
+
+            <div>
+                <input type="text" class="search" placeholder="Search for Item">
+                <button class="searchButton">Search</button>
+            </div>
+
+
+            <div class="menuButtons">
+                <button id="cart-icon">Carrinho</button>
+            </div>
+
+        </div>
+
+    </nav>
+</head>
+<body>
+<div class="container">
+    <% for( let i = 0 ; i < title.length; i++) { %>
+        <div class="card"> 
+            <img class="imageCard" src=" <%= image[i] %> ">
+            <h1 class="h1Card"> <%= title[i] %> </h1><br>
+            <p> <%= description[i] %> </p><br>
+            <p class="price-text"> <%= price[i] %> </p>
+            
+
+            <button class="add-cart">Add Cart</button>
+            
+        </div>
+    <% } %>
+
+</div>
+
+        <!--  Cart -->
+        <div class="cart">
+            <h2 class="cart-title">Seu carrinho</h2>
+        <!--  Content -->
+            <div class="cart-content">
+
+            </div>
+
+            <div class="total">
+                <div class="total-title">total</div>
+                <div class="total-price">$0</div>
+            </div>
+            <!--  Buy Button -->
+            <button type="button" class="btn-buy">Comprar!</button>
+            <!--  Cart Close -->
+            <i id="close-cart">X</i>
+            
+            
+        </div>
+
+        <footer class="footer">
+
+            <p>&copy; 2023 Meu site de e-commerce</p>
+        </footer>
+<script src="js/cart.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
